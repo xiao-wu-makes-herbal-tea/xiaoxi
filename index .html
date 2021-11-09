@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <title></title>
+    <script src="js/mui.min.js"></script>
+    <link href="css/mui.min.css" rel="stylesheet"/>
+    <style>
+		@font-face {
+			font-family:hydy;
+			src: url("fonts/hydy.ttf");
+		}
+		@font-face {
+			font-family:hyqk;
+			src: url("fonts/hyqk.ttf");
+		}
+		@font-face {
+			font-family:hycmz;
+			src: url("fonts/hycmz.ttf");
+		}
+		@font-face {
+			font-family:hypax;
+			src: url("fonts/hypax.ttf");
+		}
+		@font-face {
+			font-family:hyppt;
+			src: url("fonts/hyppt.ttf");
+		}
+		@font-face {
+			font-family:hysg;
+			src: url("fonts/hysg.ttf");
+		}
+		@font-face {
+			font-family:hyxm;
+			src: url("fonts/hyxm.ttf");
+		}
+		@font-face {
+			font-family:hyxy;
+			src: url("fonts/hyxy.ttf");
+		}		
+		@font-face {
+			font-family:hyynl;
+			src: url("fonts/hyynl.ttf");
+		}
+		@font-face {
+			font-family:hyyr;
+			src: url("fonts/hyyr.ttf");
+		}
+		*{
+			list-style: none;
+			margin: 0;
+			padding: 0;
+			box-sizing: border-box;
+    		-webkit-tap-highlight-color: transparent;
+		}
+    	body{
+    		background:url("https://www.chinacademy.club/myapp/img/bg.jpg") ;
+    		background-size:cover;
+    		font-family: "hyqk";
+    	}
+    	header{
+    		background:url("https://www.chinacademy.club/myapp/img/head.jpg");
+    		background-size: cover;
+    	}
+    	.mui-title{
+    		color: white;
+			font-family:'hyxy';
+    	}
+    	.myicon{
+    		background:url("https://www.chinacademy.club/myapp/img/me.jpg");
+    		background-size: contain;
+    		width: 40px;
+    		height: 40px;
+    		margin-top: 2px;
+    		border-radius: 50%;
+    		margin-left: -5px !important;
+    	}
+    	#dope{
+    		font-size: 18px;
+    		margin-top: 10px;
+    		margin-left: 3%;
+    		border-radius: 10px;
+    		line-height: 18px;
+    		float: left;
+    		box-shadow:0px 0px 10px rgba(0,0,0,0.7) ;
+    	}
+    	.mui-bar{
+    		background:url("https://www.chinacademy.club/myapp/img/head.jpg");
+    	}
+    	.sendBtn{
+    		width: 15%;
+    		float: right;
+    		margin-top: 10px;
+    		margin-right: 3%;
+    		background: pink;
+    		color: white;
+    		border-radius: 15px;
+    		border: 2px white solid;
+    		box-shadow:0px 1px 3px rgba(0,0,0,0.7) ;
+    		font-family: "hydy";
+    		font-size: 15px;
+    	}
+    	
+    	.left{
+			background: url("http://www.chinacademy.club/myapp/img/me.jpg") 0% 0% / 100% 100% no-repeat;
+		}
+		.mui-content{
+			background: transparent;
+		}
+    	.l-con {
+		    margin-top: 15px;
+		}
+		.clearfix {
+		    zoom: 1;
+		}
+		div{
+			margin: 0;
+		    padding: 0;
+		    border: 0;
+		    font-size: 100%;
+		    font: inherit;
+		    vertical-align: baseline;
+		}
+		.clearfix:before, .clearfix:after {
+		    content: ".";
+		    display: block;
+		    height: 0;
+		    visibility: hidden;
+		}
+		:after, :before {
+		    box-sizing: border-box;
+		}
+		.clearfix:after {
+		    clear: both;
+		}
+		.chat-icon {
+		    float: left;
+		    width: 30px;
+		    height: 30px;
+		    -webkit-border-radius: 15px;
+		    -moz-border-radius: 15px;
+		    border-radius: 15px;
+		    display: inline-block;
+		    margin-left: 15px;
+		}
+		span{
+			margin: 0;
+		    padding: 0;
+		    border: 0;
+		    font-size: 100%;
+		    font: inherit;
+		    vertical-align: baseline;
+		}
+		.text {
+		    line-height: 20px;
+		    font-size: 18px;
+		    padding: 7px 10px;
+		    max-width: 75%;
+		    word-break: break-all;
+		    word-wrap: break-word;
+		    -webkit-border-radius: 8px;
+		    -moz-border-radius: 8px;
+		    border-radius: 8px;
+		    float: left;
+		    background:#00a3f0;
+		    color: white;
+		    margin-left: 10px;
+		    transition: background 2s;
+		    margin-top: 0px;
+		    margin-bottom: 5px;
+		}
+		p{
+		    margin: 0;
+		    padding: 0;
+		    border: 0;
+		    font-size: 100%;
+		    font: inherit;
+		    vertical-align: baseline;
+		}
+		p {
+		    display: block;
+		    -webkit-margin-before: 1em;
+		    -webkit-margin-after: 1em;
+		    -webkit-margin-start: 0px;
+		    -webkit-margin-end: 0px;
+		}
+		.message-content{
+			overflow-y: scroll;
+		}
+		
+		.right{
+			background: url("https://www.chinacademy.club/myapp/img/bling.jpg") 0% 0% / 100% 100% no-repeat;			
+		}
+		.right-text{
+			background: plum;
+			float: right;
+			color: white;
+		}
+		.right{
+			float: right;
+			margin-right: 15px;
+			margin-left: 10px;
+		}
+		li{
+			position: relative;
+		}
+		.left-li:after {
+			content: "";
+			position:absolute;
+		    top: 8px;
+		    left:40px;
+			width:0;
+			height:0;
+			font-size:0;
+			border:solid 8px;
+			border-color:transparent #00a3f0 transparent transparent;
+		}
+		.right-li:after{
+			content: "";
+			position:absolute;
+		    top: 8px;
+		    right:40px;
+			width:0;
+			height:0;
+			font-size:0;
+			border:solid 8px;
+			border-color:transparent transparent transparent plum;;			
+		}
+		.mui-icon-settings{
+			color: white;
+		}
+    </style>
+</head>
+<body id="body">
+	<header class="mui-bar mui-bar-nav">
+		<a id="me" class="mui-icon myicon"></a>
+	    <h1 class="mui-title">小栋栋</h1>
+	    <a id="set" class="mui-icon mui-pull-right mui-icon-settings"></a>
+	</header>
+	<div class="mui-content">
+		<div class="message-content" id="message-content">
+			<ul class="newsList">
+				<li class="left-li"><div class="l-con clearfix"><span class="chat-icon left"></span> <p class="text">嗨！我是专属于你的小栋栋!今天又是新的一天~小栋栋爱你哟|｡･･)っ♡</p></div></li>
+			</ul>
+		</div>
+	</div>
+	<nav class="mui-bar mui-bar-tab">
+			<textarea placeholder="快来和我聊天吧~" id="dope" type="text" style="width: 75%;height:35px; border: none;outline: none;overflow:scroll;overflow-y:hidden;overflow-x:hidden"></textarea>
+			<button class="sendBtn" >发送</button>
+	</nav>
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/chat.js"></script>
+	<script type="text/javascript" charset="utf-8">
+		mui.init({
+			keyEventBind: {
+				backbutton: true //开启back按键监听
+			}
+		});
+
+        function translatePoint(position) {
+            var currentLon = position.coords.longitude;
+            var currentLat = position.coords.latitude;
+            var city = position.address.city;
+            setTimeout(function(){Send(city+'天气')},2000);　　　　　　　
+        }
+      	window.onload=function(){
+      		NewHeight=window.screen.height-104 + "px";
+      		document.getElementById("message-content").style.height=NewHeight;
+      		var string = "'hycmz','hydy','hypax','hyppt','hyqk','hysg','hyxm','hyxy','hyynl','hyyr'";   //原始数据
+			var array = string.split(",");           //转化为数组
+			var value = array[Math.round(Math.random()*(array.length-1))];  //随机抽取一个值
+			document.getElementById("body").style.fontFamily=value;
+				mui.plusReady(function() {
+				plus.geolocation.getCurrentPosition(translatePoint, function(e) {
+                    mui.toast("异常:" + e.message);
+                });
+                document.getElementById('set').addEventListener('tap', function() {
+			    if (mui.os.plus) {
+			        var buttonTit = [{
+			            title: "给美美哒小柏麟换居头"
+			        },{
+			        	title: "给可爱的小栋栋换居头"
+			        },{
+			        	title: "更换背景图片~"
+			        }];
+			        
+			        plus.nativeUI.actionSheet({
+			            title: "Your Style",
+			            cancel: "取消",
+			            buttons: buttonTit
+			        }, function(b) { /*actionSheet 按钮点击事件*/
+			            switch (b.index) {
+			                case 0:
+			                	mui.toast('居头不想换了');
+			                    break;
+			                case 1:
+			                    pickFile("bling");/*打开相册*/
+			                    break;
+			                case 2:
+			                    pickFile("me");/*打开相册*/
+			                    break;
+			                case 3:
+			                    pickFile("bg");/*打开相册*/
+			                    break;
+			                default:
+			               		mui.toast('居头不想换了');
+			                    break;
+			            }
+			        })
+			    }        
+			}, false);
+			function pickFile(title){
+    plus.gallery.pick(
+        function(paths){
+            plus.nativeUI.showWaiting();
+            var task = null;
+            task = plus.uploader.createUpload(
+                'https://www.chinacademy.club/myapp/img/1.php',
+                { method:"POST",priority:100},
+                function (t,status){
+                    plus.nativeUI.closeWaiting();
+                    console.log(t.responseText);
+                    mui.toast('上传成功');
+                    window.location.reload();
+                }
+            );
+            for(i in paths.files){
+                task.addFile(paths.files[i],{key:'uper'+i,'name':title+'.jpg'});
+            }
+            task.start();
+        },
+        function(e){mui.toast('居头不想换了');},{multiple:true,maximum:5}
+    );
+}
+		
+
+       });
+			
+			setTimeout("Send('嗨')",1000)
+			      	document.getElementById("me").addEventListener("tap",function(){
+      		mui.toast("讨厌啦~摸人家干嘛啦~")
+	      	})
+	      	document.getElementById("set").addEventListener("tap",function(){
+	
+	      	})
+   }
+
+		var clickNum = 0;
+		mui.back = function(event) {
+			clickNum++;
+			if(clickNum > 1) {
+				plus.runtime.quit();
+			} else {
+				mui.toast("再按一次退出应用");
+			}
+			setTimeout(function() {
+				clickNum = 0
+			}, 2000);
+			return false;
+		}
+  </script>
+</body>
+</html>

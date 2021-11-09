@@ -1,0 +1,109 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=0.8,minimum-scale=0.8,maximum-scale=0.8,user-scalable=no" />
+		<link href="css/mui.min.css" rel="stylesheet" />
+		<link rel="stylesheet" href="css/style.css" media="screen" type="text/css" />
+		<style>
+			body .mui-content{
+				width: 100%;
+				height:100%;
+			}
+			.milky {
+			  font-family: "Arial Rounded MT Bold", "Helvetica Rounded", Arial, sans-serif;
+			  text-transform: uppercase;
+			  display: block;
+			  font-size: 50px;
+			  color: #f1ebe5;
+			  text-shadow: 0 8px 9px #c4b59d, 0px -2px 1px #fff;
+			  font-weight: bold;
+			  letter-spacing: -4px;
+			  text-align: center;
+			  background: linear-gradient(to bottom, #ece4d9 0%,#e9dfd1 100%);
+			  position: fixed;
+			  bottom: 20%;
+			  left: 50%;
+			  margin-left: -132px;
+			  border-radius: 20px;
+			}
+			.no{
+				display: none;
+			}
+		</style>
+	</head>
+
+	<body id="body" style="overflow: hidden;" scroll="no">
+		<div class="mui-content">
+			<canvas id="text" width="100%" height="100"></canvas>
+			<canvas id="stage" width="100%" height="100"></canvas>
+			<button id="btn" class="milky no">I LOVE YOU</button>
+			<form id="form" style="display: none;">
+			    <input type="text" id="inputText" value="" />
+			    <input type="submit" id="sub" value="TRY IT" />
+			</form>
+			<div style="text-align:center;clear:both">
+			</div>
+		</div>
+		<script src="js/jquery.min.js"></script>
+		<script src='js/EasePack.min.js'></script>
+		<script src='js/TweenLite.min.js'></script>
+		<script src='js/easeljs-0.7.1.min.js'></script>
+		<script src='js/requestAnimationFrame.js'></script>	
+		<script src="js/index.js"></script>
+		<script src="js/mui.min.js"></script>
+		<script type="text/javascript">
+			mui.init()
+			mui.plusReady(function(){
+				plus.navigator.closeSplashscreen();
+				s = plus.audio.createPlayer("bg.mp3");
+				s.play();
+				var text=document.getElementById("inputText");
+				var sub=document.getElementById("sub");
+				setTimeout(function(){
+					text.value="hi";
+					sub.click();
+				},2000)
+				setTimeout(function(){
+					text.value="bling";
+					sub.click();
+				},5000)
+				setTimeout(function(){
+					text.value="i";
+					sub.click();
+				},8000)
+				setTimeout(function(){
+					text.value="love";
+					sub.click();
+				},11000)
+				setTimeout(function(){
+					text.value="you";
+					sub.click();
+				},14000)
+				setTimeout(function(){
+					$("#btn").removeClass("no");
+				},17000)
+				var flag=0;
+				var a=["嗯。。。没有了。。。","点我干嘛(◦˙▽˙◦)","你又点我~讨厌啦~","干嘛啦，我只是个I LOVE YOU","你再点也没有用啦(´▽`ʃƪ)","你怎么就这么不听话呢？੭ ᐕ)੭*⁾⁾","行啦行啦~知道你爱我啦~","点那么多次伦家要被你玩坏啦(≧ω≦)/","好啦好啦看在你爱我那么深沉的份上","呐~我的小心心给你(●'◡'●)ﾉ♡"];
+				$("#btn").click(function(){
+					mui.toast(a[flag]);
+					flag++;
+					if(flag==10){
+						plus.storage.setItem("launchFlag", "true");
+						mui.openWindow({
+							url:"main.html",
+							id:"main",
+						})
+					}
+				})
+			})
+			mui.back=function(){}
+			document.addEventListener("touchmove",function(e){
+				e.preventDefault();e.stopPropagation()
+				},false);
+		</script>
+	</body>
+
+</html>

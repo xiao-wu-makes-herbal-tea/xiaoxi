@@ -1,0 +1,24 @@
+{
+  "index.html": {
+    "refer": [
+      "1.html",
+      "guide.html",
+      "main.html"
+    ],
+    "resources": [
+      "fonts/hypax.ttf",
+      "fonts/hyxy.ttf",
+      "fonts/hyqk.ttf",
+      "fonts/hydy.ttf",
+      "fonts/hyxm.ttf",
+      "fonts/hycmz.ttf"
+    ]
+  },
+  "guide.html": {
+    "refer": [
+      "guide.html",
+      "main.html"
+    ],
+    "resources": []
+  }
+}
